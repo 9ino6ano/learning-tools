@@ -1,0 +1,12 @@
+{
+    "name":"Panikies Van Stouter",
+    "age":25,
+    "isHealthy":true,
+    "Diet":["Protein", "Carbohydrates","Fruits/Veg"],
+    "address":{
+        "city":"",
+        "state":"",
+        "country":""
+    }
+
+}

@@ -1,0 +1,57 @@
+{
+    "users":[
+            {
+            "name":"Robert Mangaliso Sobukwe",
+            "age":34,
+            "isHealthy":false,
+            "Diet":["Protein", "Carbohydrates","Dairy"],
+            "address":{
+                "city":"A",
+                "state":"PAC 1",
+                "country":"SOuth Africa"
+            }},
+            {
+            "name":"Kwame Nkrumah",
+            "age":18,
+            "isHealthy":true,
+            "Diet":["Dairy", "Fats/Oils","Fruits/Veg"],
+            "address":{
+                "city":"A",
+                "state":"PAC 2",
+                "country":"Ghana"
+            }},
+            {
+            "name":"Steve Bantu Biko",
+            "age":21,
+            "isHealthy":true,
+            "Diet":["Protein", "Carbohydrates","Fruits/Veg"],
+            "address":{
+                "city":"B",
+                "state":"PAC 2",
+                "country":"SOuth Africa"
+            }
+        },
+        {
+            "name":"Marcus Messiah Garvey",
+            "age":25,
+            "isHealthy":false,
+            "Diet":["Fats/Oils", "Carbohydrates","Dairy"],
+            "address":{
+                "city":"A",
+                "state":"PAC 1",
+                "country":"Jamaica"
+            }
+        },
+        {
+            "name":"Thomas Sankarah",
+            "age":28,
+            "isHealthy":true,
+            "Diet":["Protein", "Fats/Oils","Fruits/Veg"],
+            "address":{
+                "city":"C",
+                "state":"PAC 3",
+                "country":"Burkina Faso"
+            }
+        }
+    ]
+}

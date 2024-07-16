@@ -1,0 +1,28 @@
+apiVersion: v1  #Key-Value pairs
+kind: Pod
+metadata: #metadta object
+  name: nginx
+  labels: #labels object
+    app: nginx
+spec: # specifications object
+  containers: #container of list objects
+  -name: nginx-container
+   image: nginx
+   ports: # list of ports
+    -containerPort: 80
+   volumeMounts: # list of objects for mounting the volume
+    -name: nginx-vol
+     mountPath: /usr/nginx/html
+  -name: side-bar container
+   image: curlimages/curl
+   command: ["/bin/sh"]
+   args: ["-c", "echo Greetings from the side-bar container; sleep 300"]
+
+multi_strings: |
+  This is an example of multi-line comments
+  There can be any number of lines below this and it will be displayed one after the other
+  Next line_
+  To change this to a single line, use > instead of |
+  To use env variables = use the name of the attribute + $ e.g $name_of_env_variable
+  Using placeholders, instead of using the actual variable use a temporary_variable instead e.g around the actual_variable place {place_holder}
+  if you have multi-components inside a config-file use --- to seperate these components.

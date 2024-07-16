@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JSON Test 1</h1>
+    <script>
+        const test_1 = {
+            "name":"John DOe",
+            "age":25,
+            "isMarried":true
+        }
+        console.log(test_1)
+        console.log(test_1.name)
+    </script>
+    <h2>JSON Test 2</h2>
+    <script>
+        const test_2 = {
+            "name":"Lebo Kgaswane",
+            "age":25,
+            "isProgrammer":true,
+            "skills":["HTML", "CSS","JavaScript"],
+            "address":{
+                "city":"Sedibeng",
+                "state":"Vanderbijlpark",
+                "country":"South Africa"
+        }}
+    
+        console.log(test_2)
+        console.log(test_2.name)
+        console.log(test_2.skills)
+        console.log(test_2.address.country)
+    </script>
+    <h3>JSON Test 3 - Using fetch</h3>
+    <script>
+        fetch('test2.json')
+        .then(Response => Response.json()).
+        then(json => {
+            console.log(json);
+        })
+        //<!--We dont actually hard code the json in the html/script we fetch it from a json file-->
+    </script>
+    <h4>JSON Test 4 - Using fetch with multiple users</h4>
+    <script>
+        fetch('test2.json')
+        .then(Response => Response.json()).
+        then(json => {
+            console.log(json);
+            console.log(json.users);
+            console.log(json.users[0]);
+            console.log(json.users[1].address.city);
+        })
+        //<!--We dont actually hard code the json in the html/script we fetch it from a json file-->
+    </script>
+    <h5>JSON Test 4 - Using fetch with multiple users then changing them into lists</h5>
+    <script>
+        let list = ""
+        fetch('test2.json')
+        .then(Response => Response.json()).
+        then(json => {
+            json.test_2.array.forEach(user => {
+                list += `<li>${user.name}`
+            });
+            document.querySelector("ul").innerHTML = list;
+            console.log(json.test_2.name)
+        })
+    </script>
+    <h5>JSON Test 5 - Using the stringify</h5>
+    <script>
+        let user_list = [
+            {
+            "name":"Robert Mangaliso Sobukwe",
+            "age":34,
+            "isHealthy":false,
+            "Diet":["Protein", "Carbohydrates","Dairy"],
+            "address":{
+                "city":"A",
+                "state":"PAC 1",
+                "country":"SOuth Africa"
+            }},
+            {
+            "name":"Kwame Nkrumah",
+            "age":18,
+            "isHealthy":true,
+            "Diet":["Dairy", "Fats/Oils","Fruits/Veg"],
+            "address":{
+                "city":"A",
+                "state":"PAC 2",
+                "country":"Ghana"
+            }},
+            {
+            "name":"Steve Bantu Biko",
+            "age":21,
+            "isHealthy":true,
+            "Diet":["Protein", "Carbohydrates","Fruits/Veg"],
+            "address":{
+                "city":"B",
+                "state":"PAC 2",
+                "country":"SOuth Africa"
+            }
+        },
+        {
+            "name":"Marcus Messiah Garvey",
+            "age":25,
+            "isHealthy":false,
+            "Diet":["Fats/Oils", "Carbohydrates","Dairy"],
+            "address":{
+                "city":"A",
+                "state":"PAC 1",
+                "country":"Jamaica"
+            }
+        },
+        {
+            "name":"Thomas Sankarah",
+            "age":28,
+            "isHealthy":true,
+            "Diet":["Protein", "Fats/Oils","Fruits/Veg"],
+            "address":{
+                "city":"C",
+                "state":"PAC 3",
+                "country":"Burkina Faso"
+            }
+        }
+    ]
+
+        console.log(users) //This will return the complete users array
+        console.log(JSON.stringify(users)) // The server wil be expecting the data not in form of JSON object, thereafter will convert object into array string
+
+        let userString = "the string retrieved back from the server as (JSON)"
+        //if you want to convert the string object back into JSON
+        console.log(JSON.parse(userString));
+    </script>
+    <h6>JSON Test 6 - json Placeholder & json online Editor</h6>
+    <script>
+        fetch('https://jsonplaceholder.typicode.com/todos/1')
+        .then(Response => Response.json()).
+        then(json => {
+            json.forEach(todo => {
+                list += `<li>${todo.title}`
+            });
+            document.querySelector("ul").innerHTML = todo;
+            console.log(json)
+        })
+        //This will display a list of all the todos from the server, we are calling an api from the json placeholer
+    </script>
+</body>
+</html>

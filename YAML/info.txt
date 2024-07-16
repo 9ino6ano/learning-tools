@@ -1,0 +1,19 @@
+Popular for writting configuration files and is a widely used format for different DevOps tools and applications
+This is a serialization language , meaning different applications written in different languages can still communicate effectively using a standard format of data transfer, most popular [XML using <>, JSON using {} and YAML having none]
+Easy to understand (human readable and intuitive) , its straight-forward and clean [also YAML is a superset of JSON meaning any valid json file is also a valid in YAML file]
+Data structures are defined through line seperations and spaces with indentation
+Use online tools to verify and test the yaml code before (saving it into the config.file) => onlineyamltools.com/edit-yaml / install a yaml plugiin/extension on your IDE
+
+#1 - Key-value pairs
+
+#2 - Comments
+
+#3 - Objects
+
+#4 - Lists
+
+#5 - Booleans
+
+#6 - Multi line Strings
+
+#7 - env variables

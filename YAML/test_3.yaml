@@ -1,0 +1,21 @@
+microservices:
+  -app: user-authentication
+   port: 9000
+   version: 1.7
+   deployed: true
+
+  -app: user-authorization
+   port: 9000
+   version: 1.7
+   deployed: off
+  
+  -app: user-validation
+   port: 9000
+   version: 1.7
+   deployed: false
+
+  -app: user-verification
+   port: 9000
+   version: 1.7
+   deployed: on
+   #for boolean variables you can also add yes/no

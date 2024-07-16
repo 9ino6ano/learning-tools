@@ -1,0 +1,9 @@
+#This is an example of using lists with yaml 
+microservices:
+  -app: user-authentication
+   port: 9000
+   version: 1.7
+  
+  -app: user-verification
+   port: 9000
+   version: 1.7

@@ -1,0 +1,4 @@
+microservice: # This is an object that consists of attributes (Key-value pairs)
+  app: user-authentication
+  port: 9000
+  version: 1.7

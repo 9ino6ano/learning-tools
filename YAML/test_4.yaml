@@ -1,0 +1,23 @@
+microservices:
+  -app: user-authentication
+   port: 9000
+   version: 1.7
+  -app: user-authorization
+   port: 9100
+   version: [1.8, 2.0, 2.2]
+   deployed: true
+
+  -app: user-Validation
+   port: 9200
+   version: 1.7.1
+  -app: user-Verification
+   port: 9300
+   versions: # This is an example of using multiple lists 
+   -1.8.1
+   -1.8.2
+   -1.8.3
+   deployed: off
+#Using multiple within the same object
+microservices:
+  - user-profile 
+  - user-shopping-cart
